@@ -12,7 +12,6 @@ export const animate = (elm, options) => {
     return;
   }
   const { transition, ...properties } = options;
-  // handle transition
   elm.style.transition = `transform ${(transition && transition.duration) ||
     0}s`;
   // handle properties update

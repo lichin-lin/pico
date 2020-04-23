@@ -20,6 +20,10 @@ export const getAngle = elm => {
   values = values.split(",");
   let a = values[0];
   let b = values[1];
-  let angle = Math.round(Math.atan2(b, a) * (180 / Math.PI)) || 0;
+  let radians = Math.atan2(b, a);
+  if (radians < 0) {
+    radians += 2 * Math.PI;
+  }
+  let angle = Math.round(radians * (180 / Math.PI)) || 0;
   return angle;
 };
