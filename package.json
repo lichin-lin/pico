@@ -1,4 +1,14 @@
 {
     "name": "@lichin/pico",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "description": "Animation helper",
+    "license": "MIT",
+    "repository": "lichin-lin/pico",
+    "main": "index.js",
+    "keywords": [
+      "pico",
+      "npm",
+      "package",
+      "animation"
+    ]
 }
