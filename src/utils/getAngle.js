@@ -1,13 +1,16 @@
-// helper
+/**
+ * return current rotate angle of the elemet.
+ * @param {*} elm DOM element
+ */
 export const getAngle = elm => {
   if (!elm) return;
-  const st = window.getComputedStyle(elm, null);
+  const obj = window.getComputedStyle(elm, null);
   const transformValue =
-    st.getPropertyValue("-webkit-transform") ||
-    st.getPropertyValue("-moz-transform") ||
-    st.getPropertyValue("-ms-transform") ||
-    st.getPropertyValue("-o-transform") ||
-    st.getPropertyValue("transform") ||
+    obj.getPropertyValue("-webkit-transform") ||
+    obj.getPropertyValue("-moz-transform") ||
+    obj.getPropertyValue("-ms-transform") ||
+    obj.getPropertyValue("-o-transform") ||
+    obj.getPropertyValue("transform") ||
     "none";
   if (transformValue === "none") {
     return 0;
@@ -17,6 +20,6 @@ export const getAngle = elm => {
   values = values.split(",");
   let a = values[0];
   let b = values[1];
-  let angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+  let angle = Math.round(Math.atan2(b, a) * (180 / Math.PI)) || 0;
   return angle;
 };

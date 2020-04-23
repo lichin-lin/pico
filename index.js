@@ -1,3 +1,3 @@
 export {
-  useRotate
-} from './src/useRotate';
+  animate
+} from './src/animate';

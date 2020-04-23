@@ -2,3 +2,5 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@lichin/pico.svg)](https://github.com/lichin-lin/pico)
 
 Animation helper ⭐️
+---
+githubbox.com
