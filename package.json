@@ -1,7 +1,7 @@
 {
     "name": "@lichin/pico",
-    "version": "0.1.4",
-    "description": "Animation helper",
+    "version": "0.2.0",
+    "description": "Photo Editor helper",
     "license": "MIT",
     "repository": "lichin-lin/pico",
     "main": "index.js",
@@ -9,6 +9,7 @@
       "pico",
       "npm",
       "package",
-      "animation"
+      "image",
+      "editor"
     ]
 }

@@ -1,3 +1,3 @@
 export {
-  animate
-} from './src/animate';
+  pico
+} from './src/pico';
