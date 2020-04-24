@@ -16,18 +16,15 @@ npm install @lichin/pico
 
 ```jsx
 import React, { useEffect } from "react";
-import { pico } from "@lichin/pico";
+import { pico } from "./pico";
 import "./styles.css";
 
 export default function App() {
   const handleRotate = deg => {
     const elm = document.querySelector("#canvas");
-    const source = document.getElementById("source");
     pico(elm, {
-        rotate: deg
-      },
-      source
-    );
+      rotate: deg
+    });
   };
   useEffect(() => {
     let c = document.getElementById("canvas");
@@ -40,8 +37,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="btns">
-        <div className="btn rotate-45-pos" onClick={() => handleRotate(-45)}>
-          rotate -45deg
+        <div className="btn rotate-90-pos" onClick={() => handleRotate(-90)}>
+          rotate -90deg
         </div>
         <div className="btn rotate-90-neg" onClick={() => handleRotate(90)}>
           rotate 90deg
@@ -74,9 +71,8 @@ Animate function contain two parameter:
 | -------- | -------- | -------- | ---------------------------------------------------- |
 | element  | HTMLElement Object | -             | Single HTMLElement `CANVAS` Object |
 | options  | Object             | {}            | Please see next object description for the details |
-| source  | HTMLElement Object | -             | Single HTMLElement `IMG` Object |
 
-options object contain serverl keys (In progress):
+options object contain several keys (In progress):
 | Key | Type | Default | Description |
 | --------   | -------- | -------- | ---------------------------------------------------- |
 | rotate     | Number   | -        | The value that the element should rotate |
