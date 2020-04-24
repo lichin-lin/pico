@@ -22,9 +22,12 @@ import "./styles.css";
 export default function App() {
   const handleRotate = deg => {
     const elm = document.querySelector("#canvas");
+    const source = document.getElementById("source");
     pico(elm, {
-      rotate: deg
-    });
+        rotate: deg
+      },
+      source
+    );
   };
   useEffect(() => {
     let c = document.getElementById("canvas");
